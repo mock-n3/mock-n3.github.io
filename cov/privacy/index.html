@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO[:V] - Privacy Policy / プライバシーポリシー</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f7f8fa;
+    --fg: #1a1a2e;
+    --fg-secondary: #555770;
+    --accent: #3d5a80;
+    --accent-light: #e8eef4;
+    --border: #e0e2e8;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --heading: #16213e;
+    --link: #3d5a80;
+    --link-hover: #2b4162;
+    --badge-bg: #e8eef4;
+    --badge-fg: #3d5a80;
+    --divider: #e0e2e8;
+    --tab-active-bg: #3d5a80;
+    --tab-active-fg: #ffffff;
+    --tab-inactive-bg: #e8eef4;
+    --tab-inactive-fg: #555770;
+    --info-bg: #e8f4f0;
+    --info-border: #a8d5c2;
+    --info-fg: #2d6a4f;
+    --warn-bg: #fff8e6;
+    --warn-border: #e6c84d;
+    --warn-fg: #7a6600;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --bg-alt: #161822;
+      --fg: #e0e0e8;
+      --fg-secondary: #9a9bb0;
+      --accent: #7ba1c7;
+      --accent-light: #1e2a3a;
+      --border: #2a2c3e;
+      --card-bg: #1a1c2a;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+      --heading: #e8e8f0;
+      --link: #7ba1c7;
+      --link-hover: #9fbdda;
+      --badge-bg: #1e2a3a;
+      --badge-fg: #7ba1c7;
+      --divider: #2a2c3e;
+      --tab-active-bg: #7ba1c7;
+      --tab-active-fg: #0f1117;
+      --tab-inactive-bg: #1e2a3a;
+      --tab-inactive-fg: #9a9bb0;
+      --info-bg: #122420;
+      --info-border: #2d6a4f;
+      --info-fg: #a8d5c2;
+      --warn-bg: #2a2510;
+      --warn-border: #7a6600;
+      --warn-fg: #e6c84d;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  .header {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 1.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .app-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+  }
+
+  .version-badge {
+    display: inline-block;
+    background: var(--badge-bg);
+    color: var(--badge-fg);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.15rem 0.6rem;
+    border-radius: 99px;
+    margin-bottom: 0.75rem;
+  }
+
+  .last-updated {
+    font-size: 0.85rem;
+    color: var(--fg-secondary);
+  }
+
+  /* Language tabs */
+  .lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .lang-tab {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    background: var(--tab-inactive-bg);
+    color: var(--tab-inactive-fg);
+    font-family: inherit;
+  }
+
+  .lang-tab.active {
+    background: var(--tab-active-bg);
+    color: var(--tab-active-fg);
+  }
+
+  .lang-tab:hover:not(.active) {
+    background: var(--border);
+  }
+
+  /* Main content */
+  .main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .lang-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .lang-content.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Sections */
+  .section {
+    margin-top: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+
+  .section p,
+  .section li {
+    color: var(--fg);
+    margin-bottom: 0.5rem;
+  }
+
+  .section ul,
+  .section ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section li {
+    margin-bottom: 0.35rem;
+  }
+
+  /* Info box */
+  .info-box {
+    background: var(--info-bg);
+    border-left: 4px solid var(--info-border);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    color: var(--info-fg);
+    font-size: 0.95rem;
+  }
+
+  .info-box strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .warn-box {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    color: var(--warn-fg);
+    font-size: 0.95rem;
+  }
+
+  /* Data table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .data-table thead {
+    display: table-header-group;
+  }
+
+  .data-table tbody {
+    display: table-row-group;
+  }
+
+  .data-table tr {
+    display: table-row;
+  }
+
+  .data-table th,
+  .data-table td {
+    display: table-cell;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-table th {
+    background: var(--bg-alt);
+    font-weight: 600;
+    color: var(--heading);
+    white-space: nowrap;
+  }
+
+  .data-table td {
+    color: var(--fg);
+  }
+
+  .data-table tbody tr:hover {
+    background: var(--bg-alt);
+  }
+
+  /* Subsection */
+  .subsection-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Links */
+  a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    border-bottom-color: var(--link-hover);
+  }
+
+  /* Footer */
+  .footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--divider);
+    text-align: center;
+    color: var(--fg-secondary);
+    font-size: 0.85rem;
+  }
+
+  .footer a {
+    color: var(--fg-secondary);
+  }
+
+  /* Summary card */
+  .summary-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--card-shadow);
+  }
+
+  .summary-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 0.75rem;
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  .summary-icon {
+    flex-shrink: 0;
+    width: 1.2em;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .page-title {
+      font-size: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .header {
+      padding: 1.5rem 1rem 1.25rem;
+    }
+
+    .main {
+      padding: 0 1rem 3rem;
+    }
+
+    .lang-tabs {
+      padding: 1rem 1rem 0;
+    }
+  }
+
+  /* Print */
+  @media print {
+    .lang-tabs { display: none; }
+    .lang-content { display: block !important; }
+    .lang-content + .lang-content { page-break-before: always; margin-top: 2rem; }
+    body { font-size: 12pt; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="app-name">CO[:V]</div>
+    <h1 class="page-title">Privacy Policy / プライバシーポリシー</h1>
+    <div class="version-badge">v1.1.2</div>
+    <div class="last-updated">
+      Last updated / 最終更新日: 2026-10-02
+    </div>
+  </div>
+</header>
+
+<nav class="lang-tabs" role="tablist">
+  <button class="lang-tab active" role="tab" aria-selected="true" aria-controls="ja" id="tab-ja" onclick="switchLang('ja')">日本語</button>
+  <button class="lang-tab" role="tab" aria-selected="false" aria-controls="en" id="tab-en" onclick="switchLang('en')">English</button>
+</nav>
+
+<main class="main">
+
+<!-- ============================================================ -->
+<!-- Japanese -->
+<!-- ============================================================ -->
+<div class="lang-content active" id="ja" role="tabpanel" aria-labelledby="tab-ja">
+
+  <div class="summary-card">
+    <h3>要約</h3>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> 通常のタスク管理では、タスクデータを外部へ送信しません</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> すべてのデータはお使いのブラウザまたはローカルファイルに保存されます</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> アナリティクス・トラッキングは導入していません</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> ユーザーアカウントやサーバー側ストレージはありません</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> 任意のMac向けAIアシスト（AI日付診断を含む）は、事前説明と同意後に必要最小限のタスク情報だけをOpenAIへ送信します</div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">1. はじめに</h2>
+    <p>
+      本プライバシーポリシーは、Chrome拡張機能「CO[:V]」（以下「本拡張機能」）におけるデータの取り扱いについて説明するものです。
+      本拡張機能は個人開発者 mock-n3 により開発・提供されています。
+    </p>
+    <p>
+      CO[:V]は、プレーンなMarkdown（.md）ファイルでタスクを管理するChrome拡張機能です。
+      ユーザーのプライバシーを最大限尊重し、通常のタスク管理を端末内で完結させます。任意のAIアシスト（AI日付診断を含む）をユーザーが明示的に実行した場合だけ、本ポリシーに記載する必要最小限のタスク情報をOpenAIへ送信します。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">2. 保存されるデータ</h2>
+    <p>本拡張機能は以下のデータをユーザーのデバイス上にのみ保存します。</p>
+
+    <div style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>データの種類</th>
+          <th>保存場所</th>
+          <th>目的</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>タスクデータ（Markdownファイル）</td>
+          <td>IndexedDB またはローカルフォルダ</td>
+          <td>タスクの管理・表示</td>
+        </tr>
+        <tr>
+          <td>拡張機能の設定</td>
+          <td>Chrome Storage API（ローカル）</td>
+          <td>ユーザー設定の保持</td>
+        </tr>
+        <tr>
+          <td>AI APIキー（任意設定）</td>
+          <td>Chrome Storage API（ローカル）</td>
+          <td>AI機能の認証</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="info-box">
+      <strong>保存方式について</strong>
+      ユーザーは以下の2つの保存方式から選択できます：
+      <ul style="margin-top:0.5rem;margin-bottom:0">
+        <li><strong>ブラウザ内部ストレージ（IndexedDB）</strong> - ブラウザ内に保存されます</li>
+        <li><strong>ローカルフォルダ（File System Access API）</strong> - ユーザーが指定したローカルフォルダに直接保存されます</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">3. 自動収集しないデータ</h2>
+    <p>ユーザーがタスク本文へ任意に入力した内容を除き、本拡張機能は以下のデータを<strong>自動収集しません</strong>：</p>
+    <ul>
+      <li>個人を特定できる情報（氏名、メールアドレス等）</li>
+      <li>閲覧履歴やブラウジングデータ</li>
+      <li>利用状況に関するアナリティクスデータ</li>
+      <li>位置情報</li>
+      <li>端末の識別情報</li>
+      <li>その他いかなる形式のユーザートラッキングデータ</li>
+    </ul>
+    <div class="info-box">
+      通常のタスク管理では外部サーバーへのデータ送信を行いません。任意のAIアシスト（AI日付診断を含む）については次項をご確認ください。
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">4. AI連携について</h2>
+    <p>本拡張機能は、macOSで利用できる任意機能「AIアシスト」（タスクプランナー・カスタム指示・AIタスク診断。AIタスク診断のリスケジュールで使うAI日付診断を含む）を提供します。これらの機能は通常のタスク管理には不要であり、ユーザーが送信内容と利用目的を確認して「AIアシストの利用」に同意し、各機能の実行ボタン（「提案を作る」「診断を開始」など）を押した場合だけ実行されます。同意した記録はお使いの端末内にのみ保存され、2回目以降は同意画面を表示しません。送信内容の説明を改訂した場合は、あらためて同意を求めます。</p>
+
+    <h3 class="subsection-title">送信するデータと目的</h3>
+    <p>タスクの計画・整理・診断の提案を生成するため、次の情報を、MacのCO[:V] Native HostとCodex CLIを通じてOpenAIへ送信します。</p>
+    <ul>
+      <li>ユーザーが入力した文（やりたいこと・指示）</li>
+      <li>対象と関連するタスクの名前、説明、期日、優先度、Focus Points、作業実績、タグ、ゴール（名前・期日・完了条件）、親子関係、着手状態（カスタム指示で対象を指定しないときは未完了タスク全体、AIタスク診断では画面に表示中の未完了タスク）</li>
+      <li>登録タグの一覧と使用件数、ユーザーが固定した完了日・ゴール・タグ</li>
+      <li>見積もりの参考にする完了タスクの名前と作業実績</li>
+      <li>AI日付診断では、候補外タスクの本文は送らず、日別の合計Focus Pointsだけ</li>
+    </ul>
+    <p>本拡張機能が送信するのは上記の項目だけです。Vaultのパス、Markdownファイル全体、APIキー、閲覧履歴、Webページ内容、位置情報、端末識別情報、アナリティクスは送信しません。</p>
+
+    <h3 class="subsection-title">処理経路とユーザー操作</h3>
+    <ul>
+      <li>拡張機能から同一端末上のNative Hostへ、必要最小限の診断スナップショットを送信します</li>
+      <li>Native HostはVaultを直接読み書きせず、Codex CLIを実行してOpenAIから日付提案を受け取ります</li>
+      <li>結果は提案として表示され、ユーザーが内容を確認・選択して反映を確定するまでタスク・ゴール・タグを変更しません</li>
+      <li>開発者が運営するサーバーを経由せず、開発者がタスク内容を受信・閲覧することはありません</li>
+    </ul>
+
+    <h3 class="subsection-title">Codex CLIに対する制限</h3>
+    <p>Codex CLIはユーザーのMac上で動作するため、しくみの上ではMac内のファイルを読むことができます。上記の送信内容を超える情報がAI処理へ取り込まれることを避けるため、本拡張機能のNative Hostは次の制限のもとでCodex CLIを起動します。</p>
+    <ul>
+      <li>書き込みを許可しないサンドボックス（<code>--sandbox read-only</code>）で実行し、ユーザーのCodex設定・スキル・プラグインを読み込みません</li>
+      <li>ファイル参照・コマンド実行・ブラウザ操作・コンピュータ操作に使う機能を無効化して起動します</li>
+      <li>返ってきた提案を検査し、送信していない資格情報・秘密鍵・トークンに相当する文字列が含まれていた場合は、その結果全体を破棄してユーザーに通知します</li>
+      <li>上記の制限が入っていない旧版のNative Hostでは、AIアシストを実行しません（更新手順を表示します）</li>
+    </ul>
+
+    <h3 class="subsection-title">APIキー設定</h3>
+    <p>設定画面で任意に保存したAI APIキーはChrome Storage APIのローカル領域にのみ保持され、VaultやExport ZIPには含まれず、開発者へ送信されません。Mac向けAIアシスト（AI日付診断を含む）はこの設定値ではなく、ユーザー自身がログインしたCodex CLIを利用します。</p>
+
+    <div class="warn-box">
+      AI機能をご利用の場合、送信されるデータの取り扱いについては、各AIサービス提供者のプライバシーポリシーもご確認ください。
+      <ul style="margin-top:0.5rem;margin-bottom:0">
+        <li><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI プライバシーポリシー</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">5. 使用する権限</h2>
+    <p>本拡張機能はManifest V3に基づき、以下の最小限の権限のみを使用します。</p>
+
+    <div style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>権限</th>
+          <th>使用目的</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>sidePanel</code></td>
+          <td>Chromeのサイドパネルにタスク管理UIを表示するために使用</td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>拡張機能の設定やAPIキーをブラウザ内に保存するために使用</td>
+        </tr>
+        <tr>
+          <td><code>nativeMessaging</code>（任意）</td>
+          <td>ユーザーがMac向けAIアシスト（AI日付診断を含む）を実行する場合だけ、同一端末上のCO[:V] Native Hostと通信するために使用</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="info-box">
+      本拡張機能は、ウェブページの内容へのアクセス権限やリモートコード実行の権限を要求しません。
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">6. データのバックアップとエクスポート</h2>
+    <p>
+      ユーザーは手動でデータをZIPファイルとしてエクスポート・インポートすることができます。
+      この操作はすべてユーザーのデバイス上で完結し、外部サーバーへのデータ送信は発生しません。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">7. 第三者へのデータ提供</h2>
+    <p>
+      本拡張機能は、いかなる第三者に対してもユーザーのデータを販売、取引、貸与、または共有しません。
+      ユーザーが任意のAIアシスト（AI日付診断を含む）に同意して実行した際にOpenAIへ送信される必要最小限のデータを除き、ユーザーのデータがデバイス外に出ることはありません。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">8. Cookie・トラッキング技術</h2>
+    <p>
+      本拡張機能はCookie、ウェブビーコン、ピクセルタグ、その他のトラッキング技術を一切使用しません。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">9. 子供のプライバシー</h2>
+    <p>
+      本拡張機能は特定の年齢層を対象としたものではなく、意図的に子供から個人情報を収集することはありません。
+      ユーザーは、AIアシストへ送信したくない個人情報や機密情報をタスク本文へ含めないでください。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">10. プライバシーポリシーの変更</h2>
+    <p>
+      本プライバシーポリシーは必要に応じて更新されることがあります。
+      重要な変更がある場合は、拡張機能のアップデートを通じてお知らせします。
+      最新のプライバシーポリシーは常にこのページでご確認いただけます。
+    </p>
+    <p>
+      v0.8.7では、左上のあいさつメッセージを時間帯・週のフェーズ・季節のイベントに合わせて表示するよう改善しました。
+      あいさつの選択状態は端末内のChrome Storageにのみ保存され、外部へ送信されません。
+    </p>
+    <p>
+      v0.8.8では、タスク追加時に説明（URLやメモ）を入力できるようにしました。
+      説明はこれまでの編集画面と同じくタスクの一部としてVaultにのみ保存され、外部へ送信されません。
+    </p>
+    <p>
+      v1.0.0では、Mac向けの任意機能を「AIアシスト」へ拡張し、タスクプランナー、カスタム指示、リスケジュール・タグ・優先度のAIタスク診断を追加しました。
+      送信対象が広がったため、実行前の説明を更新して過去の同意を無効にし、あらためて明示同意を求めます。提案はユーザーが内容と対象を確認・選択し、反映を確定するまでVaultへ書き込みません。
+    </p>
+    <p>
+      v1.0.1では、Codex CLIに対する制限（ファイル参照・コマンド実行・ブラウザ操作の無効化、提案に対する資格情報の検査、旧版Native Hostの実行拒否）を追加し、「4. AI連携について」に明記しました。
+      送信する情報そのものは変わりませんが、Codex CLIがユーザーのMac上で動作することの説明を加えたため、実行前の説明を更新して過去の同意を無効にし、あらためて明示同意を求めます。
+    </p>
+    <p>
+      v1.1.0では、タスク追加・編集時のゴール選択、タグのアーカイブと復元、Mac向けAIアシストの初期設定手順を改善しました。
+      アーカイブしたタグは通常のタグ表示や入力候補から隠れ、タグ一覧から復元できます。既存タスクのタグは書き換えず、データは従来どおりユーザーの端末内に保存されます。AIアシストでOpenAIへ送信する情報の範囲、同意の手順、拡張機能の権限は変更していません。
+    </p>
+    <p>
+      v1.1.1では、Mac向けAIアシストが2回目以降の実行で止まる不具合を修正しました。
+      Codex CLIが起動時にCodex用の作業フォルダへ展開する同梱スキルを、Native Hostが起動オプションで止め、残っているものは実行前に片付けます。「4. AI連携について」に記載したCodex CLIに対する制限は変わりません。AIアシストでOpenAIへ送信する情報の範囲、同意の手順、拡張機能の権限は変更していません。
+    </p>
+    <p>
+      v1.1.2では、AIアシストとAIタスク診断の提案を反映する処理を改善しました。
+      ユーザーが選ばなかった提案に依存する変更は反映せず、反映できない提案にはその理由を表示します。提案はこれまでどおり、ユーザーが内容を確認・選択して反映を確定するまでVaultへ書き込みません。AIアシストでOpenAIへ送信する情報の範囲、同意の手順、拡張機能の権限は変更していません。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Chrome Web Store Limited Useへの準拠</h2>
+    <p>本拡張機能が取り扱うユーザーデータは、公開された単一目的であるタスク管理と、その一部である任意のAIアシストによる計画・整理・診断の提案を提供するためにのみ使用します。ユーザーデータを広告、リターゲティング、信用評価、販売、または一般的な市場調査に使用・転送しません。開発者または第三者の人間がユーザーのタスクデータを閲覧することはありません。</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">11. お問い合わせ</h2>
+    <p>本プライバシーポリシーに関するご質問やご懸念がございましたら、以下までご連絡ください。</p>
+    <ul>
+      <li><strong>開発者:</strong> mock-n3</li>
+      <li><strong>メール:</strong> <a href="mailto:mock.n3@gmail.com">mock.n3@gmail.com</a></li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- English -->
+<!-- ============================================================ -->
+<div class="lang-content" id="en" role="tabpanel" aria-labelledby="tab-en">
+
+  <div class="summary-card">
+    <h3>Summary</h3>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> Standard task management does not transmit task data externally</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> All data is stored in your browser or local filesystem</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> No analytics or tracking of any kind</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> No user accounts or server-side storage</div>
+    <div class="summary-item"><span class="summary-icon">&#x2714;</span> The optional Mac AI Assist (including the AI date diagnosis) sends only the disclosed minimum task data to OpenAI after consent</div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">1. Introduction</h2>
+    <p>
+      This Privacy Policy describes how the Chrome extension "CO[:V]" (the "Extension") handles data.
+      The Extension is developed and maintained by mock-n3, an individual developer based in Japan.
+    </p>
+    <p>
+      CO[:V] is a Chrome extension that manages tasks using plain Markdown (.md) files.
+      It is designed with the utmost respect for user privacy and keeps standard task management on the device. Only when the user explicitly invokes the optional AI Assist (including the AI date diagnosis) does it send the minimum task data described in this policy to OpenAI.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">2. Data Stored</h2>
+    <p>The Extension stores the following data only on the user's device:</p>
+
+    <div style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Storage Location</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Task data (Markdown files)</td>
+          <td>IndexedDB or local folder</td>
+          <td>Task management and display</td>
+        </tr>
+        <tr>
+          <td>Extension settings</td>
+          <td>Chrome Storage API (local)</td>
+          <td>Preserving user preferences</td>
+        </tr>
+        <tr>
+          <td>AI API keys (optional)</td>
+          <td>Chrome Storage API (local)</td>
+          <td>Authentication for AI features</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="info-box">
+      <strong>Storage Options</strong>
+      Users can choose between two storage methods:
+      <ul style="margin-top:0.5rem;margin-bottom:0">
+        <li><strong>Browser-internal storage (IndexedDB)</strong> - Data is stored within the browser</li>
+        <li><strong>Local folder (File System Access API)</strong> - Data is saved directly to a user-specified local folder</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">3. Data Not Collected Automatically</h2>
+    <p>Except for content that users voluntarily enter into task fields, the Extension does <strong>not</strong> automatically collect any of the following:</p>
+    <ul>
+      <li>Personally identifiable information (name, email, etc.)</li>
+      <li>Browsing history or browsing data</li>
+      <li>Usage analytics or telemetry</li>
+      <li>Location data</li>
+      <li>Device identifiers</li>
+      <li>Any other form of user tracking data</li>
+    </ul>
+    <div class="info-box">
+      Standard task management does not transmit data to external servers. See the next section for the optional AI Assist (including the AI date diagnosis).
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">4. AI Integration</h2>
+    <p>The Extension provides optional "AI Assist" features on macOS (Task Planner, Custom Instructions, and AI Task Diagnosis, including the AI date diagnosis used for rescheduling). They are not required for standard task management. They run only after the user reviews the disclosure, consents to "AI Assist", and clicks a run button (such as Create Suggestions or Start Diagnosis). The record of that consent is stored only on the user's own device, so the disclosure screen is not shown again on later runs. If the disclosure is revised, consent is requested again.</p>
+
+    <h3 class="subsection-title">Data sent and purpose</h3>
+    <p>To generate planning, organizing, and diagnosis suggestions, the following is sent to OpenAI through the local CO[:V] Native Host and Codex CLI:</p>
+    <ul>
+      <li>Text the user enters (what they want to do, or instructions)</li>
+      <li>For target and related tasks: title, description, due date, priority, Focus Points, work records, tags, goal (title, due date, completion criteria), parent-child relationships, and work status (all open tasks when Custom Instructions has no target; the open tasks shown on screen for AI Task Diagnosis)</li>
+      <li>The list of registered tags with usage counts, and the due date, goals, and tags the user fixed</li>
+      <li>Titles and work records of completed tasks used as estimation references</li>
+      <li>For the AI date diagnosis, non-candidate tasks are sent only as aggregate Focus Points by date, without task text</li>
+    </ul>
+    <p>Vault paths, complete Markdown files, API keys, browsing history, website content, location, device identifiers, and analytics are not sent.</p>
+
+    <h3 class="subsection-title">Processing and user control</h3>
+    <ul>
+      <li>The Extension sends a bounded diagnosis snapshot to the Native Host on the same device</li>
+      <li>The Native Host does not read or write the Vault; it invokes the Codex CLI to obtain date suggestions from OpenAI</li>
+      <li>Suggestions do not change tasks, goals, or tags until the user reviews, selects, and explicitly applies them</li>
+      <li>No server operated by the developer is involved, and the developer does not receive or read task content</li>
+    </ul>
+
+    <h3 class="subsection-title">API key settings</h3>
+    <p>AI API keys optionally saved in Settings remain in Chrome Storage on the device, are excluded from Vault and exported ZIP files, and are not sent to the developer. Mac AI Assist uses the user's signed-in Codex CLI rather than these saved settings.</p>
+
+    <div class="warn-box">
+      If you use the AI features, please also review the privacy policies of the respective AI service providers
+      for information on how they handle the data sent to their APIs:
+      <ul style="margin-top:0.5rem;margin-bottom:0">
+        <li><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">5. Permissions Used</h2>
+    <p>The Extension uses only the following minimal permissions under Manifest V3:</p>
+
+    <div style="overflow-x:auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>sidePanel</code></td>
+          <td>Display the task management UI in Chrome's side panel</td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Save extension settings and API keys within the browser</td>
+        </tr>
+        <tr>
+          <td><code>nativeMessaging</code> (optional)</td>
+          <td>Communicate with the CO[:V] Native Host on the same Mac only when the user invokes AI Assist</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="info-box">
+      The Extension does not request access to web page content or remote code execution permissions.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">6. Data Backup and Export</h2>
+    <p>
+      Users can manually export and import their data as ZIP files.
+      This operation is performed entirely on the user's device and does not involve any data transmission to external servers.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">7. Third-Party Data Sharing</h2>
+    <p>
+      The Extension does not sell, trade, lend, or share user data with any third party.
+      Except for the minimum data sent to OpenAI after the user consents to and invokes the optional AI Assist (including the AI date diagnosis), user data never leaves the device.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">8. Cookies and Tracking Technologies</h2>
+    <p>
+      The Extension does not use cookies, web beacons, pixel tags, or any other tracking technologies.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">9. Children's Privacy</h2>
+    <p>
+      The Extension is not targeted at any specific age group and does not intentionally collect personal information from children.
+      Users should not include personal or confidential information in task text if they do not want it sent by AI Assist.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">10. Changes to This Policy</h2>
+    <p>
+      This Privacy Policy may be updated from time to time.
+      Significant changes will be communicated through extension updates.
+      The latest version of this Privacy Policy is always available on this page.
+    </p>
+    <p>
+      Version 0.8.7 improves the greeting in the upper-left corner so it reflects the time of day, phase of the week, and seasonal events.
+      The selected greeting state is stored only in Chrome Storage on the user's device and is not transmitted externally.
+    </p>
+    <p>
+      Version 0.8.8 lets users enter a description (URLs or notes) when adding a task.
+      As with the existing edit dialog, the description is saved only in the user's vault as part of the task and is not transmitted externally.
+    </p>
+    <p>
+      Version 1.0.0 expands the optional Mac feature into AI Assist, adding Task Planner, Custom Instructions, and AI Task Diagnosis for rescheduling, tags, and priorities.
+      Because the data scope has expanded, the Extension invalidates prior consent, presents the revised disclosure, and requests explicit consent again. Suggestions do not write to the Vault until the user reviews, selects, and confirms what to apply.
+    </p>
+    <p>
+      Version 1.0.1 adds restrictions on the Codex CLI — file access, command execution, and browser or computer control are disabled, returned suggestions are screened for credentials, and an older Native Host without these restrictions is refused — and documents them in section 4.
+      The data sent is unchanged, but because the disclosure now explains that the Codex CLI runs on the user's own Mac, the Extension invalidates prior consent and requests explicit consent again.
+    </p>
+    <p>
+      Version 1.1.0 improves goal selection when adding or editing tasks, adds tag archiving and restoration, and simplifies setup for the optional Mac AI Assist.
+      Archived tags are hidden from standard tag views and input suggestions, and can be restored from the tag list without rewriting existing tasks; the data remains stored on the user's device. The scope of information sent to OpenAI by AI Assist, the consent flow, and extension permissions are unchanged.
+    </p>
+    <p>
+      Version 1.1.1 fixes an issue where the optional Mac AI Assist stopped from the second run onward.
+      The Native Host now prevents the Codex CLI from extracting its bundled skills into the Codex working folder at startup and removes any leftovers before running. The Codex CLI restrictions described in section 4 are unchanged. The scope of information sent to OpenAI by AI Assist, the consent flow, and extension permissions are unchanged.
+    </p>
+    <p>
+      Version 1.1.2 improves how AI Assist and AI Task Diagnosis suggestions are applied.
+      Changes that depend on a suggestion the user did not select are not applied, and the reason is shown for suggestions that cannot be applied. As before, suggestions do not write to the Vault until the user reviews, selects, and confirms what to apply. The scope of information sent to OpenAI by AI Assist, the consent flow, and extension permissions are unchanged.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Chrome Web Store Limited Use Compliance</h2>
+    <p>User data handled by the Extension is used only to provide its disclosed single purpose of task management and the optional AI Assist planning, organization, and diagnosis suggestions within that purpose. User data is not used or transferred for advertising, retargeting, credit assessment, sale, or general market research. Neither the developer nor other humans are permitted to read users' task data.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">11. Contact</h2>
+    <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+    <ul>
+      <li><strong>Developer:</strong> mock-n3</li>
+      <li><strong>Email:</strong> <a href="mailto:mock.n3@gmail.com">mock.n3@gmail.com</a></li>
+    </ul>
+  </section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 mock-n3. CO[:V] v1.1.2</p>
+</footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    document.querySelectorAll('.lang-tab').forEach(function(el) {
+      el.classList.remove('active');
+      el.setAttribute('aria-selected', 'false');
+    });
+    document.getElementById(lang).classList.add('active');
+    document.getElementById('tab-' + lang).classList.add('active');
+    document.getElementById('tab-' + lang).setAttribute('aria-selected', 'true');
+    document.documentElement.lang = lang;
+  }
+
+  // Detect browser language and set default
+  (function() {
+    var browserLang = navigator.language || navigator.userLanguage || '';
+    if (browserLang.startsWith('ja')) {
+      switchLang('ja');
+    }
+  })();
+</script>
+
+</body>
+</html>
