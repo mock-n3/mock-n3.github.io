@@ -13,6 +13,7 @@ mock-n3 が公開している Chrome 拡張機能の関連ページ（プライ�
 |---|---|---|
 | 一覧 | `index.html` | https://mock-n3.github.io/ |
 | CO[:V] プライバシーポリシー | `cov/privacy/index.html` | https://mock-n3.github.io/cov/privacy/ |
+| CO[:V] アイコン | `cov/icon.svg`・`cov/icon128.png` | ポリシーの見出しとファビコンで使う（元は CO[:V] の `extension/icons/`） |
 
 新しい拡張機能やページを足したら、`index.html` の一覧にもリンクを足す。
 
