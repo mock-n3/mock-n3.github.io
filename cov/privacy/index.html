@@ -405,9 +405,9 @@
     <img class="app-logo" src="https://mock-n3.github.io/cov/icon.svg" alt="" width="56" height="56">
     <div class="app-name">CO[:V]</div>
     <h1 class="page-title">Privacy Policy / プライバシーポリシー</h1>
-    <div class="version-badge">v1.1.2</div>
+    <div class="version-badge">v1.1.3</div>
     <div class="last-updated">
-      Last updated / 最終更新日: 2026-10-02
+      Last updated / 最終更新日: 2026-10-30
     </div>
   </div>
 </header>
@@ -647,6 +647,10 @@
       v1.1.2では、AIアシストとAIタスク診断の提案を反映する処理を改善しました。
       ユーザーが選ばなかった提案に依存する変更は反映せず、反映できない提案にはその理由を表示します。提案はこれまでどおり、ユーザーが内容を確認・選択して反映を確定するまでVaultへ書き込みません。AIアシストでOpenAIへ送信する情報の範囲、同意の手順、拡張機能の権限は変更していません。
     </p>
+    <p>
+      v1.1.3では、タスクの期日を変更したときに、変更前の期日を1つだけタスク行に残すようにしました。
+      前回の期日は従来どおりユーザーの端末内のVaultに保存され、AIアシストでOpenAIへ送信する情報には含めません。同意の手順、拡張機能の権限は変更していません。
+    </p>
   </section>
 
   <section class="section">
@@ -885,6 +889,10 @@
       Version 1.1.2 improves how AI Assist and AI Task Diagnosis suggestions are applied.
       Changes that depend on a suggestion the user did not select are not applied, and the reason is shown for suggestions that cannot be applied. As before, suggestions do not write to the Vault until the user reviews, selects, and confirms what to apply. The scope of information sent to OpenAI by AI Assist, the consent flow, and extension permissions are unchanged.
     </p>
+    <p>
+      Version 1.1.3 keeps the previous due date on the task line when a task's due date is changed (only the one immediately before).
+      The previous due date is stored in the Vault on the user's device like other task data and is not included in the information AI Assist sends to OpenAI. The consent flow and extension permissions are unchanged.
+    </p>
   </section>
 
   <section class="section">
@@ -906,7 +914,7 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; 2026 mock-n3. CO[:V] v1.1.2</p>
+  <p>&copy; 2026 mock-n3. CO[:V] v1.1.3</p>
 </footer>
 
 <script>
