@@ -405,9 +405,9 @@
     <img class="app-logo" src="https://mock-n3.github.io/cov/icon.svg" alt="" width="56" height="56">
     <div class="app-name">CO[:V]</div>
     <h1 class="page-title">Privacy Policy / プライバシーポリシー</h1>
-    <div class="version-badge">v1.1.3</div>
+    <div class="version-badge">v1.1.4</div>
     <div class="last-updated">
-      Last updated / 最終更新日: 2026-10-30
+      Last updated / 最終更新日: 2026-10-31
     </div>
   </div>
 </header>
@@ -651,6 +651,9 @@
       v1.1.3では、タスクの期日を変更したときに、変更前の期日を1つだけタスク行に残すようにしました。
       前回の期日は従来どおりユーザーの端末内のVaultに保存され、AIアシストでOpenAIへ送信する情報には含めません。同意の手順、拡張機能の権限は変更していません。
     </p>
+    <p>
+      v1.1.4では、AIアシストの提案から追加するタスクに期限の指定がないとき、今日の日付を入れるようにしました。送信する情報、利用目的、同意の手順、拡張機能の権限は変更していません。
+    </p>
   </section>
 
   <section class="section">
@@ -893,6 +896,9 @@
       Version 1.1.3 keeps the previous due date on the task line when a task's due date is changed (only the one immediately before).
       The previous due date is stored in the Vault on the user's device like other task data and is not included in the information AI Assist sends to OpenAI. The consent flow and extension permissions are unchanged.
     </p>
+    <p>
+      Version 1.1.4 sets today's date on tasks added from AI Assist suggestions when no due date is specified. The information sent, the purpose of use, the consent flow, and extension permissions are unchanged.
+    </p>
   </section>
 
   <section class="section">
@@ -914,7 +920,7 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; 2026 mock-n3. CO[:V] v1.1.3</p>
+  <p>&copy; 2026 mock-n3. CO[:V] v1.1.4</p>
 </footer>
 
 <script>
